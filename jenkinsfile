@@ -6,5 +6,15 @@ pipeline{
 						git branch: 'master', url: 'https://github.com/ankitpatel090990/maven-project.git'
 						}
 				}
+
+				stage('validate code'){
+						steps{
+							withMaven(jdk: 'LOCAL_JDK', maven: 'LOCAL_MAVEN') {
+									    sh 'mvn validate'
+									}
+						}
+				}
+
+
 			}
 }
