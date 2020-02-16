@@ -23,10 +23,10 @@ pipeline{
 						}
 				}
 
-				stage('complie'){
+				stage('package'){
 						steps{
 							withMaven(jdk: 'LOCAL_JDK', maven: 'LOCAL_MAVEN') {
-									    sh 'mvn complie'
+									    sh 'mvn package'
 									}
 						}
 				}
