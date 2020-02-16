@@ -5,5 +5,4 @@ pipeline{
 						steps{
 						git branch: 'master', url: 'https://github.com/ankitpatel090990/maven-project.git'
 						}
-				}
-}
+				}}
